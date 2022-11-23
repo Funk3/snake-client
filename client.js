@@ -17,8 +17,6 @@ const setupInput = function () {
   return stdin;
 };
 
-
-
 // establishes a connection with the game server
 const connect = function () {
   const conn = net.createConnection({
