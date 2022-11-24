@@ -6,16 +6,25 @@ const handleUserInput = (key) => {
     process.exit()
   }
   if (key === "w") {
-    console.log("Move: up")
+    connection.write("Move: up")
   }
   if (key === "a") {
-    console.log("Move: left")
+    connection.write("Move: left")
   }
   if (key === "s") {
-    console.log("Move: down")
+    connection.write("Move: down")
   }
   if (key === "d") {
-    console.log("Move: right")
+    connection.write("Move: right")
+  }
+  if (key === "1") {
+    connection.write("Say: I like green eggs")
+  }
+  if (key === "2") {
+    connection.write("Say: Dogs are the best")
+  }
+  if (key === "3") {
+    connection.write("Say: You guys are alright")
   }
 }
 // setup interface to handle user input from stdin
