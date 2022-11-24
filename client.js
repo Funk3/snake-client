@@ -1,22 +1,5 @@
 const net = require("net");
 
-const handleUserInput = (key) => {
-  if (key === "\u0003") {
-    console.log("You have pressed CTRL + C");
-    process.exit()
-  }
-}
-// setup interface to handle user input from stdin
-const setupInput = function () {
-  const stdin = process.stdin;
-  stdin.setRawMode(true);
-  stdin.setEncoding("utf8");
-  stdin.resume();
-   // event listener
-  stdin.on("data", handleUserInput);
-  return stdin;
-};
-
 // establishes a connection with the game server
 const connect = function () {
   const conn = net.createConnection({
@@ -37,8 +20,7 @@ const connect = function () {
 
 module.exports = {
   connect,
-  setupInput,
-  handleUserInput
 }
+
 
 
