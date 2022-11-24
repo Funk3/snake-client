@@ -1,6 +1,6 @@
 const handleUserInput = (key) => {
   if (key === "\u0003") {
-    console.log("Exited Program");
+    console.log("Exiting program");
     process.exit()
   }
 }
